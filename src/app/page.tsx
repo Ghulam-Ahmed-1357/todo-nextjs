@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { ChangeEvent, useState } from "react"
 
 export default function Home(){
   const[taskList,setTaskList] = useState(['Coding','Exercise'])
@@ -14,7 +14,8 @@ export default function Home(){
         setTask('');
     }
     }
-    const handletask = (e)=>{
+    
+    const handletask = (e: ChangeEvent<HTMLInputElement>)=>{
       setTask(e.target.value)
   }
 
